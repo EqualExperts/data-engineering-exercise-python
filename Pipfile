@@ -1,0 +1,28 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+
+[dev-packages]
+rope = "*"
+mypy = "*"
+pytest = "*"
+black = "*"
+isort = "*"
+flake8 = "*"
+pytest-cov = "*"
+autopep8 = "*"
+
+[requires]
+python_version = "3.8"
+
+[scripts]
+tidy = "scripts/tidy.sh"
+lint = "scripts/lint.sh"
+test = "pytest --cov=src"
+fetch_data = "scripts/fetch_data.sh"
+
+[pipenv]
+allow_prereleases = true
