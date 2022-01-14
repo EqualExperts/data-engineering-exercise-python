@@ -47,10 +47,12 @@ You are free to change anything about this bootstrap solution as you see fit (im
 - Simplicity – We value simplicity as an architectural virtue and a development practice. Solutions should reflect the difficulty of the assigned task, and should NOT be overly complex. Layers of abstraction, patterns, or architectural features that aren’t called for should NOT be included.
 
 ### Final notes
-Please include any instructions or details of any important decisions you made. Also please answer the following questions: 
+Please include instructions about your strategy and important decisions you made. Also please answer the following questions: 
 - How did you meet the data scientist needs?
 - How did you ensure data quality?
 - What would need to change for the solution scale to work with a 10TB dataset with new data arriving each day?
+
+Your submission is your own work, you will not share your submission with others (including sharing your repository on Github) and you will not otherwise engage in activities that dishonestly improve your result.
 
 ## Next Phase
 We are expecting you to succeed in this phase, so the next phase is an interview where we are expecting that you can show and run your solution on your end. 
