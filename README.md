@@ -37,7 +37,7 @@ You are free to change anything about this bootstrap solution as you see fit (im
 [src/db.py](src/db.py) is empty, but the associated test demonstrates interaction with an SQLite3 database.
 
 #### Your data ingestion should take into consideration the following:
-- the final data should be friendly to query;
+- the database schema should be suitable for analytical queries;
 - basic data quality issues should be handled on the ingestion;
 - the ingestion code and strategy should be production level.
 
@@ -48,7 +48,7 @@ You are free to change anything about this bootstrap solution as you see fit (im
 
 ### Final notes
 Please include instructions about your strategy and important decisions you made. Also please answer the following questions: 
-- How did you meet the data scientist needs?
+- How did you meet the needs of a data scientist?
 - How did you ensure data quality?
 - What would need to change for the solution scale to work with a 10TB dataset with new data arriving each day?
 
