@@ -7,7 +7,7 @@ We are expecting a simple solution that addresses just what is asked, and you sh
 
 ## Exercise Instructions 
 
-Imagine that you are working in an organisation, and the data scientists/analysts need data from Stackexchange (Posts and Votes) to make data analysis. The exercise consists in making a light data pipeline which ingests data from json files into a data warehouse. To simplify the exercise you should consider you just need to ingest the data which is in files, there is no need to implement a strategy to coupe with a continuous ingestion, neither with a large amount of data. Although we'll ask a question at the end that you can elaborate what will you change in your strategy to coupe with that.
+Imagine that you are working in an organisation, and the data scientists/analysts need data from Stackexchange (Posts and Votes) to make data analysis. The exercise consists in making a light data pipeline which ingests data from json files into a data warehouse. To simplify the exercise you should consider you just need to ingest the data which is in files, there is no need to implement a strategy to coupe with a continuous ingestion, neither with a large amount of data. Although we'll ask a question at the end that you can elaborate what will you change in your strategy to cope with that.
 
 This repo contains a bootstrap project to create the data ingestion.
 You are free to change anything about this bootstrap solution as you see fit (import another libs, create/delete src files, for example), so long as it can still be executed by a reviewer.
@@ -42,7 +42,7 @@ You are free to change anything about this bootstrap solution as you see fit (im
 - the ingestion code and strategy should be production level.
 
 #### Things we value:
-- Self-explanatory code – the solution must speak for itself. Multiple paragraphs explaining the solution are a sign that isn’t straightforward enough to understand purely by reading the code. Also, you should ensure your code is correctly formatted and lints cleanly.
+- Self-explanatory code – the solution must speak for itself. Multiple paragraphs explaining the solution are a sign that it isn’t straightforward enough to understand purely by reading the code. Also, you should ensure your code is correctly formatted and lints cleanly.
 - Tests – the solution must be well tested and possibly using a (test­-first) approach.
 - Simplicity – We value simplicity as an architectural virtue and a development practice. Solutions should reflect the difficulty of the assigned task, and should NOT be overly complex. Layers of abstraction, patterns, or architectural features that aren’t called for should NOT be included.
 
@@ -56,5 +56,5 @@ Your submission is your own work, you will not share your submission with others
 
 ## Next Phase
 We are expecting you to succeed in this phase, so the next phase is an interview where we are expecting that you can show and run your solution on your end. 
-We'll give you our feedback and we'll ask for you to pair with us to solve a couple of sql questions on the loaded data. 
+You walk us through your solution and we're going to provide feedback and discuss any choices that you made.
 Apart from the exercise, we'll have a conversation about your experience, and you'll let us know in detail your past challenges and your future expectations. Good Luck!
