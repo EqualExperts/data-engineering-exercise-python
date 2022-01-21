@@ -14,6 +14,8 @@ You have been given the following user stories to action:
 > - I want to query posts and votes in the data warehouse
 > - So that I can conveniently answer important business questions such as "what is the mean votes per post per week?"
 
+Additional context:
+
 - You are provided a sample of posts and votes; in production, files like these will land as a supplier sends them
 - You will use sqlite3 for demonstration; your solution should treat sqlite3 as if it were a real data warehouse
 - If the sqlite3 database file is deleted, your pipeline should re-create it from posts and tags data
