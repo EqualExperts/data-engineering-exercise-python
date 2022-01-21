@@ -10,9 +10,9 @@ We are expecting a simple solution that addresses just what is asked, and you sh
 You are a consultant assisting an organisation with data engineering.
 You have been given the following user stories to action:
 
-> As a data scientist or analyst
-> I want to query posts and votes in the data warehouse
-> So that I can conveniently answer important business questions such as "what is the mean votes per post per week?"
+> - As a data scientist or analyst
+> - I want to query posts and votes in the data warehouse
+> - So that I can conveniently answer important business questions such as "what is the mean votes per post per week?"
 
 - You are provided a sample of posts and votes; in production, files like these will land as a supplier sends them
 - You will use sqlite3 for demonstration; your solution should treat sqlite3 as if it were a real data warehouse
