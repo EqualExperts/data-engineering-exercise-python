@@ -18,32 +18,26 @@ Additional context:
 
 - You are provided a sample of posts and votes; in production, files like these will land as a supplier sends them
 - You will use sqlite3 for demonstration; your solution should treat sqlite3 as if it were a real data warehouse
+- The database should be saved on the root folder of the project as warehouse.db
 - If the sqlite3 database file is deleted, your pipeline should re-create it from posts and tags data
 - If the sqlite3 database file already exists, your pipeline should merge any new posts and votes data into it
-- Your program will be invoked with `pipenv run python src/main.py /path/to/posts_file.json /path/to/votes_file.json`
-
+- There's a Makefile you should use to run/test/lint your project.
+- The Makefile abstracts the development environment inside a docker container, then docker is the only requirement in your environment.
+- We're going to review your project using the same Makefile.
+  
 This repo contains a bootstrap project to create the data ingestion.
-You are free to change anything about this bootstrap solution as you see fit (import another libs, create/delete src files, for example), so long as it can still be executed by a reviewer.
+You are free to import another libs into the Pipfile, create/delete src files, for example), so long as it can still be executed by the Makefile
 
-- The project is set up to use Pipenv & Python 3.8
-- SQLite3 provides an infrastructure-free simple data warehouse stand-in
-- Testing environment with pytest
-- Facilites for linting etc. are provided as scripts and integrated with Pipenv
+[Makefile](Makefile) is provided with the following targets: 
 
-[Pipfile](Pipfile) is provided to manage the dependencies using pipenv. 
-
-  - Use `pipenv install --dev` to install dependencies in a virtualenv.
-  - Use `pipenv shell` to spawn a shell within the virtualenv.
-
-[Scripts](scripts) is provided with helpful scripts to fetch data, test, lint and tidy code. Pipenv is used to run the scripts: 
-
-  - `pipenv run fetch_data`
-
-  - `pipenv run test`
-
-  - `pipenv run lint`
-
-  - `pipenv run tidy`
+create-docker-image            Create Docker Image to run the challenge
+fetch-data                     Fetch dataset
+install-dependencies           Install challenge dependencies from Pipfile
+lint                           Lint code
+run-query                      Run query (make query="select * from posts" run-query)
+run                            Run challenge 
+test                           Run tests
+tidy                           Tidy code
 
 [src/main.py](src/main.py) is provided as an entry point.
 
@@ -55,7 +49,7 @@ You are free to change anything about this bootstrap solution as you see fit (im
 - Simplicity – We value simplicity as an architectural virtue and a development practice. Solutions should reflect the difficulty of the assigned task, and should NOT be overly complex. Layers of abstraction, patterns, or architectural features that aren’t called for should NOT be included.
 
 ### Final notes
-Please include instructions about your strategy and important decisions you made. Also please answer the following questions: 
+**Please include instructions** about your strategy and important decisions you made. Also please answer the following questions: 
 - How did you meet the needs of a data scientist?
 - How did you ensure data quality?
 - What would need to change for the solution scale to work with a 10TB dataset with new data arriving each day?
