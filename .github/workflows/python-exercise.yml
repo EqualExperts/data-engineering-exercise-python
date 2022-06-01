@@ -13,19 +13,9 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: Set up Python 3.8
-      uses: actions/setup-python@v2
-      with:
-        python-version: "3.8"
-    - name: Install pipenv
-      run: |
-        python -m pip install --upgrade pipenv
-    - name: Install dependencies
-      run: |
-        pipenv install --dev
-    - name: Run Lint
-      run: |
-        pipenv run lint
-    - name: Run Test
-      run: |
-        pipenv run test
+    - name: Create Image
+      run: make create-docker-image 
+    - name: Install Dependencies
+      run: make install-dependencies
+    - name: Test
+      run: make test
