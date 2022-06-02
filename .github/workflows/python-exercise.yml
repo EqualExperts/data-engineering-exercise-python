@@ -13,8 +13,6 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: Create Image
-      run: make create-docker-image 
     - name: Install Dependencies
       run: make install-dependencies
     - name: Test
