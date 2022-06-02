@@ -28,16 +28,7 @@ Additional context:
 This repo contains a bootstrap project to create the data ingestion.
 You are free to import another libs into the Pipfile, create/delete src files, for example), so long as it can still be executed by the Makefile
 
-[Makefile](Makefile) is provided with the following targets: 
-
-create-docker-image            Create Docker Image to run the challenge
-fetch-data                     Fetch dataset
-install-dependencies           Install challenge dependencies from Pipfile
-lint                           Lint code
-run-query                      Run query (make query="select * from posts" run-query)
-run                            Run challenge 
-test                           Run tests
-tidy                           Tidy code
+[Makefile](Makefile) is provided with the following targets: create-docker-image, fetch-data, install-dependencies, lint, run-query, run, test, tidy and help.
 
 [src/main.py](src/main.py) is provided as an entry point.
 
