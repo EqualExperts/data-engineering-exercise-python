@@ -6,12 +6,9 @@ docker_run = docker run --rm --mount type=bind,source="$(shell pwd)/",target=/ro
 help: ## Show available targets
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'
 
-.PHONY: create-docker-image
-create-docker-image: ## Create Docker Image to run the challenge
-	docker build --no-cache -t ee-data-engineering-challenge:0.0.1 .
-
 .PHONY: install-dependencies
 install-dependencies: ## Install challenge dependencies from Pipfile
+	docker build --no-cache -t ee-data-engineering-challenge:0.0.1 .
 	$(docker_run) pipenv install --dev
 
 .PHONY: tidy

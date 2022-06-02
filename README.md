@@ -5,10 +5,13 @@ Thank you for taking the time to participate in this challenge. Please read care
 As a Data Engineer, you should NOT find this exercise to be particularly difficult. 
 We are expecting a simple solution that addresses just what is asked, and you should take no more than 90 minutes.
 
+## Requirements to run the challenge
+
+You just need to have **docker**.
 ## Exercise Instructions 
 
-You are a consultant assisting an organisation with data engineering.
-You have been given the following user stories to action:
+Imagine you are a consultant assisting an organisation with data engineering.
+You have been given the following user story:
 
 > - As a data scientist or analyst
 > - I want to query posts and votes in the data warehouse
@@ -16,9 +19,9 @@ You have been given the following user stories to action:
 
 Additional context:
 
-- You are provided a sample of posts and votes; in production, files like these will land as a supplier sends them
+- You are provided a sample of posts and votes (use ``make fetch-data``). However, in production, files like these will land as a supplier sends them.
 - You will use sqlite3 for demonstration; your solution should treat sqlite3 as if it were a real data warehouse
-- The database should be saved on the root folder of the project as warehouse.db
+- The database should be saved on the root folder of the project as warehouse.db, as we're doing on [src/db_test.py]
 - If the sqlite3 database file is deleted, your pipeline should re-create it from posts and tags data
 - If the sqlite3 database file already exists, your pipeline should merge any new posts and votes data into it
 - There's a Makefile you should use to run/test/lint your project.
@@ -28,7 +31,7 @@ Additional context:
 This repo contains a bootstrap project to create the data ingestion.
 You are free to import another libs into the Pipfile, create/delete src files, for example), so long as it can still be executed by the Makefile
 
-[Makefile](Makefile) is provided with the following targets: create-docker-image, fetch-data, install-dependencies, lint, run-query, run, test, tidy and help.
+[Makefile](Makefile) is provided with the following targets: install-dependencies, fetch-data lint, run-query, run, test, tidy and help. You should run **install-dependencies** before any other targets.
 
 [src/main.py](src/main.py) is provided as an entry point.
 
