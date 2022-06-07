@@ -1,5 +1,5 @@
 #!/bin/bash
 
-mypy
+mypy src
 
-flake8
+flake8 src

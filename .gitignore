@@ -5,3 +5,6 @@ __pycache__/
 uncommitted/
 warehouse.db
 .coverage
+.cache
+.local
+.bash_history
