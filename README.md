@@ -5,9 +5,10 @@ Thank you for taking the time to participate in this challenge. Please read care
 As a Data Engineer, you should NOT find this exercise to be particularly difficult. 
 We are expecting a simple solution that addresses just what is asked, and you should take no more than 90 minutes.
 
-## Requirements to run the challenge
+### Requirements to run the challenge
 
-You just need to have **docker**.
+**docker**
+
 ## Exercise Instructions 
 
 Imagine you are a consultant assisting an organisation with data engineering.
@@ -31,7 +32,7 @@ Additional context:
 This repo contains a bootstrap project to create the data ingestion.
 You are free to import another libs into the Pipfile, create/delete src files, for example), so long as it can still be executed by the Makefile
 
-[Makefile](Makefile) is provided with the following targets: install-dependencies, fetch-data lint, run-query, run, test, tidy and help. You should run **install-dependencies** before any other targets.
+[Makefile](Makefile) is provided with the following targets: install-dependencies, fetch-data, lint, run-query, run, test, tidy and **help**. You should run **make install-dependencies** before any other targets.
 
 [src/main.py](src/main.py) is provided as an entry point.
 
