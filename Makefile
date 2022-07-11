@@ -9,7 +9,7 @@ help: ## Show available targets
 .PHONY: install-dependencies
 install-dependencies: ## Install challenge dependencies from Pipfile
 	docker build --no-cache -t ee-data-engineering-challenge:0.0.1 .
-	$(docker_run) pipenv install --dev
+	$(docker_run) pipenv sync --dev
 
 .PHONY: tidy
 tidy: ## Tidy code
