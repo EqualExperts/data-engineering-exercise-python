@@ -23,7 +23,7 @@ Additional context:
 - You are provided a sample of posts and votes (use ``make fetch-data``). However, in production, files like these will land as a supplier sends them.
 - You will use sqlite3 for demonstration; your solution should treat sqlite3 as if it were a real data warehouse
 - The database should be saved on the root folder of the project as warehouse.db, as we're doing on [src/db_test.py]
-- If the sqlite3 database file is deleted, your pipeline should re-create it from posts and tags data
+- If the sqlite3 database file is deleted, your pipeline should re-create it from posts and votes data
 - If the sqlite3 database file already exists, your pipeline should merge any new posts and votes data into it
 - There's a Makefile you should use to run/test/lint your project.
 - The Makefile abstracts the development environment inside a docker container, then docker is the only requirement in your environment.
