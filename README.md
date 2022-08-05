@@ -1,32 +1,34 @@
 [![Python exercise](https://github.com/EqualExperts/data-engineering-exercise-python/actions/workflows/python-exercise.yml/badge.svg)](https://github.com/EqualExperts/data-studio-exercise-python-sql/actions/workflows/python-exercise.yml)
-## Data Engineering Challenge
+# Data Engineering Challenge
 Thank you for taking the time to participate in this challenge. Please read carefully all the instructions below and don’t hesitate to contact us if you have any queries.
 
 As a Data Engineer, you should NOT find this exercise to be particularly difficult. 
 We are expecting a simple solution that addresses just what is asked, and you should take no more than 90 minutes.
 
-### Requirements to run the challenge
+The exercise runs inside **docker**, so apart from that you don't need any setup.
 
-**docker**
+# Vote Outliers 
 
-## Exercise Instructions 
+## Task
 
-Imagine you are a consultant assisting an organisation with data engineering.
-You have been given the following user story:
+You should create an ingestion process for votes data and address the following use case.
 
-> - As a data scientist or analyst
-> - I want to query posts and votes in the data warehouse
-> - So that I can conveniently answer important business questions such as "what is the mean votes per post per week?"
+### Use Case - Detect outlier weeks
 
-Additional context:
+A week is classified as outlier when: 
 
-- You are provided a sample of posts and votes (use ``make fetch-data``). However, in production, files like these will land as a supplier sends them.
-- You will use sqlite3 for demonstration; your solution should treat sqlite3 as if it were a real data warehouse
-- The database should be saved on the root folder of the project as warehouse.db, as we're doing on [src/db_test.py]
-- If the sqlite3 database file is deleted, your pipeline should re-create it from posts and votes data
-- If the sqlite3 database file already exists, your pipeline should merge any new posts and votes data into it
-- There's a Makefile you should use to run/test/lint your project.
-- The Makefile abstracts the development environment inside a docker container, then docker is the only requirement in your environment.
+- the total votes deviate from the past average of more than 20%
+- when the previous week wasn’t an outlier. 
+
+Each outlier should contain the year, the week number and the number of votes.
+
+Details:
+- You are provided with a sample file of votes (use ``make fetch-data`` to get the sample data). 
+- In a Prod environment the ingestion runs multiple times to ingest 'new' data.
+- The ingestion receives the file path as parameter, as you can see in the Makefile.
+- You will use sqlite3 for demonstration; your solution should treat sqlite3 as if it were a real data warehouse.
+- The database should be saved on the root folder of the project as warehouse.db, as we're doing on [src/db_test.py].
+- There's a Makefile which abstracts the development environment inside a docker container.
 - We're going to review your project using the same Makefile.
   
 This repo contains a bootstrap project to create the data ingestion.
