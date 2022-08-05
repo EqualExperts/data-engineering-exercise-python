@@ -17,7 +17,7 @@ You should create an ingestion process for votes data and address the following 
 
 A week is classified as outlier when: 
 
-- the total votes deviate from the past average of more than 20%
+- the total votes deviate from the average of more than 20%
 - when the previous week wasn’t an outlier. 
 
 Each outlier should contain the year, the week number and the number of votes.
@@ -47,9 +47,8 @@ You are free to import another libs into the Pipfile, create/delete src files, f
 
 ### Final notes
 **Please include instructions** about your strategy and important decisions you made. Also please answer the following questions: 
-- How did you meet the needs of a data scientist?
-- How did you ensure data quality?
-- What would need to change for the solution scale to work with a 10TB dataset with new data arriving each day?
+- What kind of data quality measures would you apply to your solution in production?
+- What would need to change for the solution scale to work with a 10TB dataset with 5GB new data arriving each day?
 
 **Your submission should be a zip file containing your solution and the requested documentation.**
 
