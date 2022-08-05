@@ -7,6 +7,7 @@ We are expecting a simple solution that addresses just what is asked, and you sh
 
 The exercise runs inside **docker**, so apart from that you don't need any setup.
 
+(if you've started the exercise in the previous version, feel free to continue the challenge, here is the [link](https://github.com/EqualExperts/data-engineering-exercise-python/tree/v0.1.0))
 # Vote Outliers 
 
 ## Task
