@@ -1,8 +1,10 @@
 import json
-
+import sys
 # The following code is purely illustrative
 try:
-    with open('uncommitted/Posts.json', 'r') as posts_in:
-        print(json.load(posts_in)[0])
+    with open(sys.argv[1]) as votes_in:
+         for line in votes_in:
+            print(json.loads(line))
+            break
 except FileNotFoundError:
-    print("Please download the dataset using 'pipenv run fetch_data'")
+    print("Please download the dataset using 'make fetch_data'")

@@ -9,7 +9,7 @@ help: ## Show available targets
 .PHONY: install-dependencies
 install-dependencies: ## Install challenge dependencies from Pipfile
 	docker build --no-cache -t ee-data-engineering-challenge:0.0.1 .
-	$(docker_run) pipenv sync --dev
+	$(docker_run) pipenv install --dev
 
 .PHONY: tidy
 tidy: ## Tidy code
@@ -29,7 +29,7 @@ fetch-data: ## Fetch dataset
 
 .PHONY: run
 run: fetch-data ## Run challenge 
-	$(docker_run) pipenv run python src/main.py uncommitted/Posts.json uncommitted/Votes.json
+	$(docker_run) pipenv run python src/main.py uncommitted/votes.jsonl
 
 .PHONY: run-query
 run-query: ## Run query (make query="select * from posts" run-query)
